@@ -10,3 +10,15 @@
 - Ein Datum muss in Ihrem REST-Endpoint
 - Verwenden Sie eine DerbyDb sowie eine H2
 - Erstellen Systemtests auf Basis JavaSE.
+
+## Projektbeschreibung
+
+Mein Projekt ist eine einfache Filmverwaltung mit den dazugehörigen Entitäten, wie z.B. Movie und Actor.
+
+## Class Diagram
+
+<img src="Movies-CLD.png" />
+
+## Entity Relationship Diagram
+
+<img src="images/Movies-ERD.png" />
