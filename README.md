@@ -13,12 +13,12 @@
 
 ## Projektbeschreibung
 
-Mein Projekt ist eine einfache Filmverwaltung mit den dazugehörigen Entitäten, wie z.B. Movie und Actor.
+Mein Projekt realisiert eine einfache Filmverwaltung mit den dazugehörigen Entitäten, wie z.B. Movie und Actor.
 
 ## Class Diagram
 
-<img src="Movies-CLD.png" />
+<img src="Movies/images/Movies-CLD.png" />
 
 ## Entity Relationship Diagram
 
-<img src="images/Movies-ERD.png" />
+<img src="Movies/images/Movies-ERD.png" />
