@@ -17,8 +17,8 @@ Mein Projekt realisiert eine einfache Filmverwaltung mit den dazugehörigen Enti
 
 ## Class Diagram
 
-<img src="Movies/images/Movies-CLD.png" />
+<img src="Movies/images/Movies-CLD2.png" />
 
 ## Entity Relationship Diagram
 
-<img src="Movies/images/Movies-ERD.png" />
+<img src="Movies/images/Movies-ERD2.png" />
