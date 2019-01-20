@@ -3,6 +3,7 @@ package at.htl.movies.model;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
+import java.util.List;
 
 @XmlRootElement
 @Entity(name = "Movie")
@@ -18,22 +19,23 @@ public class Movie {
 
     private String title;
     private String genre;
-    private double rating;
+
+    @OneToMany(mappedBy = "movie", cascade = {CascadeType.REFRESH,CascadeType.DETACH,CascadeType.PERSIST,CascadeType.MERGE})
+    private List<Rating> ratings;
 
     private LocalDate releaseDate;
 
-    @ManyToOne
-    private Director director;
+    @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    private List<CrewMember> crewMembers;
 
     public Movie() {
     }
 
-    public Movie(String title, String genre, double rating, LocalDate releaseDate, Director director) {
+    public Movie(String title, String genre, LocalDate releaseDate, List<CrewMember> crewMembers) {
         this.title = title;
         this.genre = genre;
-        this.rating = rating;
         this.releaseDate = releaseDate;
-        this.director = director;
+        this.crewMembers = crewMembers;
     }
 
     public Long getId() {
@@ -56,6 +58,14 @@ public class Movie {
         this.genre = genre;
     }
 
+    public List<Rating> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(List<Rating> ratings) {
+        this.ratings = ratings;
+    }
+
     public LocalDate getReleaseDate() {
         return releaseDate;
     }
@@ -64,19 +74,11 @@ public class Movie {
         this.releaseDate = releaseDate;
     }
 
-    public Director getDirector() {
-        return director;
+    public List<CrewMember> getCrewMembers() {
+        return crewMembers;
     }
 
-    public void setDirector(Director director) {
-        this.director = director;
-    }
-
-    public double getRating() {
-        return rating;
-    }
-
-    public void setRating(double rating) {
-        this.rating = rating;
+    public void setCrewMembers(List<CrewMember> crewMembers) {
+        this.crewMembers = crewMembers;
     }
 }

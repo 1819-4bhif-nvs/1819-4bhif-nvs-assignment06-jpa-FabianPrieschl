@@ -1,6 +1,6 @@
 package at.htl.movies.rest;
 
-import at.htl.movies.model.Movie;
+import at.htl.movies.model.CrewMember;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -9,11 +9,10 @@ import javax.persistence.PersistenceException;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.List;
 
-@Path("movie")
+@Path("crewMember")
 @Stateless
-public class MovieEndpoint {
+public class CrewMemberEndpoint {
 
     @PersistenceContext
     EntityManager em;
@@ -22,16 +21,16 @@ public class MovieEndpoint {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
-        return Response.ok().entity(em.createNamedQuery("Movie.findAll", Movie.class).getResultList()).build();
+        return Response.ok().entity(em.createNamedQuery("CrewMember.findAll", CrewMember.class).getResultList()).build();
     }
 
     @Path("find/{id}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getMovie(@PathParam("id") long id) {
-        Movie m = em.find(Movie.class, id);
-        if(m != null){
-            return Response.ok().entity(m).build();
+    public Response getCrewMembers(@PathParam("id") long id) {
+        CrewMember cm = em.find(CrewMember.class, id);
+        if(cm != null){
+            return Response.ok().entity(cm).build();
         }else{
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -40,9 +39,9 @@ public class MovieEndpoint {
     @DELETE
     @Path("{id}")
     public Response delete(@PathParam("id") long id){
-        Movie m = em.find(Movie.class, id);
-        if(m != null){
-            em.remove(m);
+        CrewMember cm = em.find(CrewMember.class, id);
+        if(cm != null){
+            em.remove(cm);
         }
         return Response.noContent().build();
     }
@@ -50,24 +49,24 @@ public class MovieEndpoint {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response post(Movie m){
+    public Response post(CrewMember cm){
         try {
-            em.persist(m);
+            em.persist(cm);
             em.flush();
-            em.refresh(m);
+            em.refresh(cm);
         }catch(PersistenceException e){
             return Response.status(400).build();
         }
-        return Response.ok().entity(m).build();
+        return Response.ok().entity(cm).build();
     }
 
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response put(Movie m){
-        m = em.merge(m);
+    public Response put(CrewMember cm){
+        cm = em.merge(cm);
         em.flush();
-        em.refresh(m);
-        return Response.ok().entity(m).build();
+        em.refresh(cm);
+        return Response.ok().entity(cm).build();
     }
 }
