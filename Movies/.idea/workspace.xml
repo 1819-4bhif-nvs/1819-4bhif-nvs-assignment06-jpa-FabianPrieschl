@@ -7,25 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cde0f5d1-4206-4bae-ad83-5ecf6624790e" name="Default Changelist" comment="Added bidirectional relations">
-      <change beforePath="$PROJECT_DIR$/../Movies-st/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies-st/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies-st/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies-st/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies-st/Movies-st.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies-st/src/test/java/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies-st/src/test/java/MovieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f5b8a591-2e7c-4043-96c2-c6c674eb1072.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/movies/business/InitBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/movies/business/InitBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/movies/model/Actor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/movies/model/Director.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/movies/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/movies/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/movies/model/MovieActor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/movies/model/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/movies/rest/ActorEndpoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/movies/rest/DirectorEndpoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/movies/rest/MovieActorsEndpoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/movies/rest/MovieEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/movies/rest/MovieEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,71 +52,122 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="uml://JAVA/at.htl.movies.model">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
               <ID>JAVA</ID>
               <OriginalElement>at.htl.movies.model</OriginalElement>
               <nodes>
-                <node x="602.5" y="72.5">at.htl.movies.model.CriticsRating</node>
-                <node x="952.5" y="690.5">at.htl.movies.model.CrewMember</node>
-                <node x="322.0" y="243.5">at.htl.movies.model.UserRating</node>
-                <node x="89.5" y="72.5">at.htl.movies.model.Rating</node>
-                <node x="555.0" y="439.5">at.htl.movies.model.Movie</node>
+                <node x="922.5" y="72.5">at.htl.movies.model.CriticsRating</node>
+                <node x="232.5" y="290.5">at.htl.movies.model.CrewMember</node>
+                <node x="42.0" y="1043.5">at.htl.movies.model.UserRating</node>
+                <node x="49.5" y="832.5">at.htl.movies.model.Rating</node>
+                <node x="595.0" y="519.5">at.htl.movies.model.Movie</node>
               </nodes>
               <notes />
               <edges>
                 <edge source="at.htl.movies.model.Movie" target="at.htl.movies.model.Rating">
-                  <point x="-80.0" y="-80.5" />
-                  <point x="600.0" y="360.0" />
-                  <point x="180.0" y="360.0" />
-                  <point x="20.0" y="47.5" />
+                  <point x="0.0" y="-80.5" />
+                  <point x="720.0" y="160.0" />
+                  <point x="146.66666666666666" y="160.0" />
+                  <point x="26.666666666666657" y="-47.5" />
                 </edge>
                 <edge source="at.htl.movies.model.Movie" target="at.htl.movies.model.CrewMember">
-                  <point x="125.0" y="0.0" />
-                  <point x="1040.0" y="520.0" />
-                  <point x="0.0" y="-69.5" />
+                  <point x="-80.0" y="-80.5" />
+                  <point x="640.0" y="240.0" />
+                  <point x="360.0" y="240.0" />
+                  <point x="40.0" y="-69.5" />
                 </edge>
                 <edge source="at.htl.movies.model.CriticsRating" target="at.htl.movies.model.Rating">
-                  <point x="0.0" y="-47.5" />
-                  <point x="680.0" y="0.0" />
-                  <point x="160.0" y="0.0" />
-                  <point x="0.0" y="-47.5" />
+                  <point x="-77.5" y="0.0" />
+                  <point x="133.33333333333334" y="120.0" />
+                  <point x="13.333333333333343" y="-47.5" />
                 </edge>
                 <edge source="at.htl.movies.model.UserRating" target="at.htl.movies.model.Movie">
                   <point x="78.0" y="0.0" />
-                  <point x="640.0" y="280.0" />
-                  <point x="-40.0" y="-80.5" />
+                  <point x="720.0" y="1080.0" />
+                  <point x="0.0" y="80.5" />
                 </edge>
                 <edge source="at.htl.movies.model.CriticsRating" target="at.htl.movies.model.Movie">
                   <point x="0.0" y="47.5" />
-                  <point x="0.0" y="-80.5" />
+                  <point x="1000.0" y="600.0" />
+                  <point x="125.0" y="0.0" />
                 </edge>
                 <edge source="at.htl.movies.model.Rating" target="at.htl.movies.model.Movie">
-                  <point x="-70.5" y="40.0" />
-                  <point x="40.0" y="160.0" />
-                  <point x="40.0" y="500.0" />
-                  <point x="-125.0" y="-20.0" />
+                  <point x="40.0" y="-47.5" />
+                  <point x="160.0" y="760.0" />
+                  <point x="600.0" y="760.0" />
+                  <point x="-120.0" y="80.5" />
                 </edge>
                 <edge source="at.htl.movies.model.UserRating" target="at.htl.movies.model.Rating">
-                  <point x="0.0" y="-36.5" />
-                  <point x="400.0" y="160.0" />
-                  <point x="70.5" y="40.0" />
+                  <point x="-78.0" y="0.0" />
+                  <point x="0.0" y="1080.0" />
+                  <point x="0.0" y="880.0" />
+                  <point x="-70.5" y="0.0" />
                 </edge>
                 <edge source="at.htl.movies.model.CrewMember" target="at.htl.movies.model.Movie">
-                  <point x="-87.5" y="0.0" />
-                  <point x="760.0" y="760.0" />
-                  <point x="80.0" y="80.5" />
+                  <point x="87.5" y="0.0" />
+                  <point x="600.0" y="360.0" />
+                  <point x="-120.0" y="-80.5" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="414.0" y="230.5" />
+              <settings layout="Hierarchic Group" zoom="1.0" x="194.0" y="259.0" />
               <SelectedNodes />
               <Categories>
                 <Category>Fields</Category>
               </Categories>
               <SCOPE>Project Files</SCOPE>
               <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="uml://DATABASE/d34f6814-9601-4270-85c5-402cc1dfdae9.SCHEMA:APP">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>d34f6814-9601-4270-85c5-402cc1dfdae9.SCHEMA:APP</OriginalElement>
+              <nodes>
+                <node x="240.0" y="141.0">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE</node>
+                <node x="-14.5" y="-19.0">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.CREWMEMBER</node>
+                <node x="244.5" y="341.0">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.RATING</node>
+                <node x="-14.5" y="341.0">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.CRITICSRATING</node>
+                <node x="227.0" y="552.0">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.USERRATING</node>
+                <node x="-17.5" y="163.5">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE_CREWMEMBER</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.USERRATING" target="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.RATING">
+                  <point x="0.0" y="-48.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.RATING" target="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE">
+                  <point x="0.0" y="-59.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE_CREWMEMBER" target="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.CREWMEMBER">
+                  <point x="0.0" y="-36.5" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE_CREWMEMBER" target="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE">
+                  <point x="97.5" y="0.0" />
+                  <point x="-80.0" y="0.0" />
+                </edge>
+                <edge source="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.CRITICSRATING" target="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.RATING">
+                  <point x="94.5" y="0.0" />
+                  <point x="-75.5" y="0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="266.5" y="227.0" />
+              <SelectedNodes>
+                <node>d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE_CREWMEMBER</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
             </state>
           </provider>
         </entry>
@@ -284,6 +317,11 @@
             <path>
               <item name="Movies" type="b2602c69:ProjectViewProjectNode" />
               <item name="Movies" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Movies" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Movies" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -360,9 +398,9 @@
     <property name="DatabaseDriversLRU" value="h2&#10;derby" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548021091960" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548021268870" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Movies-st" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -463,19 +501,18 @@
       <workItem from="1547057918784" duration="439000" />
       <workItem from="1547058589950" duration="1915000" />
       <workItem from="1548016507986" duration="915000" />
-      <workItem from="1548020830967" duration="247000" />
+      <workItem from="1548020830967" duration="493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37495000" />
+    <option name="totallyTimeSpent" value="37741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48945147" visible="true" weight="0.20872483" />
-      <window_info id="Persistence" order="1" sideWeight="0.51054853" side_tool="true" visible="true" weight="0.20872483" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48866856" visible="true" weight="0.20872483" />
+      <window_info id="Persistence" order="1" sideWeight="0.51133144" side_tool="true" visible="true" weight="0.20872483" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -494,7 +531,7 @@
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.32925472" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
@@ -670,28 +707,10 @@
           <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
             <element signature="e#1054#1055#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
-            <element signature="e#1190#1191#0" expanded="true" />
-            <element signature="e#1230#1231#0" expanded="true" />
-            <element signature="e#1260#1261#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
             <element signature="e#1391#1392#0" expanded="true" />
-            <element signature="e#1425#1426#0" expanded="true" />
-            <element signature="e#1482#1483#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1576#1577#0" expanded="true" />
-            <element signature="e#1610#1611#0" expanded="true" />
-            <element signature="e#1674#1675#0" expanded="true" />
-            <element signature="e#1720#1721#0" expanded="true" />
+            <element signature="e#1421#1422#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -743,64 +762,113 @@
           <ID>JAVA</ID>
           <OriginalElement>at.htl.movies.model</OriginalElement>
           <nodes>
-            <node x="602.5" y="72.5">at.htl.movies.model.CriticsRating</node>
-            <node x="952.5" y="690.5">at.htl.movies.model.CrewMember</node>
-            <node x="322.0" y="243.5">at.htl.movies.model.UserRating</node>
-            <node x="89.5" y="72.5">at.htl.movies.model.Rating</node>
-            <node x="555.0" y="439.5">at.htl.movies.model.Movie</node>
+            <node x="922.5" y="72.5">at.htl.movies.model.CriticsRating</node>
+            <node x="232.5" y="290.5">at.htl.movies.model.CrewMember</node>
+            <node x="42.0" y="1043.5">at.htl.movies.model.UserRating</node>
+            <node x="49.5" y="832.5">at.htl.movies.model.Rating</node>
+            <node x="595.0" y="519.5">at.htl.movies.model.Movie</node>
           </nodes>
           <notes />
           <edges>
             <edge source="at.htl.movies.model.Movie" target="at.htl.movies.model.Rating">
-              <point x="-80.0" y="-80.5" />
-              <point x="600.0" y="360.0" />
-              <point x="180.0" y="360.0" />
-              <point x="20.0" y="47.5" />
+              <point x="0.0" y="-80.5" />
+              <point x="720.0" y="160.0" />
+              <point x="146.66666666666666" y="160.0" />
+              <point x="26.666666666666657" y="-47.5" />
             </edge>
             <edge source="at.htl.movies.model.Movie" target="at.htl.movies.model.CrewMember">
-              <point x="125.0" y="0.0" />
-              <point x="1040.0" y="520.0" />
-              <point x="0.0" y="-69.5" />
+              <point x="-80.0" y="-80.5" />
+              <point x="640.0" y="240.0" />
+              <point x="360.0" y="240.0" />
+              <point x="40.0" y="-69.5" />
             </edge>
             <edge source="at.htl.movies.model.CriticsRating" target="at.htl.movies.model.Rating">
-              <point x="0.0" y="-47.5" />
-              <point x="680.0" y="0.0" />
-              <point x="160.0" y="0.0" />
-              <point x="0.0" y="-47.5" />
+              <point x="-77.5" y="0.0" />
+              <point x="133.33333333333334" y="120.0" />
+              <point x="13.333333333333343" y="-47.5" />
             </edge>
             <edge source="at.htl.movies.model.UserRating" target="at.htl.movies.model.Movie">
               <point x="78.0" y="0.0" />
-              <point x="640.0" y="280.0" />
-              <point x="-40.0" y="-80.5" />
+              <point x="720.0" y="1080.0" />
+              <point x="0.0" y="80.5" />
             </edge>
             <edge source="at.htl.movies.model.CriticsRating" target="at.htl.movies.model.Movie">
               <point x="0.0" y="47.5" />
-              <point x="0.0" y="-80.5" />
+              <point x="1000.0" y="600.0" />
+              <point x="125.0" y="0.0" />
             </edge>
             <edge source="at.htl.movies.model.Rating" target="at.htl.movies.model.Movie">
-              <point x="-70.5" y="40.0" />
-              <point x="40.0" y="160.0" />
-              <point x="40.0" y="500.0" />
-              <point x="-125.0" y="-20.0" />
+              <point x="40.0" y="-47.5" />
+              <point x="160.0" y="760.0" />
+              <point x="600.0" y="760.0" />
+              <point x="-120.0" y="80.5" />
             </edge>
             <edge source="at.htl.movies.model.UserRating" target="at.htl.movies.model.Rating">
-              <point x="0.0" y="-36.5" />
-              <point x="400.0" y="160.0" />
-              <point x="70.5" y="40.0" />
+              <point x="-78.0" y="0.0" />
+              <point x="0.0" y="1080.0" />
+              <point x="0.0" y="880.0" />
+              <point x="-70.5" y="0.0" />
             </edge>
             <edge source="at.htl.movies.model.CrewMember" target="at.htl.movies.model.Movie">
-              <point x="-87.5" y="0.0" />
-              <point x="760.0" y="760.0" />
-              <point x="80.0" y="80.5" />
+              <point x="87.5" y="0.0" />
+              <point x="600.0" y="360.0" />
+              <point x="-120.0" y="-80.5" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="414.0" y="230.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="194.0" y="259.0" />
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
           </Categories>
           <SCOPE>Project Files</SCOPE>
           <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/d34f6814-9601-4270-85c5-402cc1dfdae9.SCHEMA:APP">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>d34f6814-9601-4270-85c5-402cc1dfdae9.SCHEMA:APP</OriginalElement>
+          <nodes>
+            <node x="240.0" y="141.0">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE</node>
+            <node x="-14.5" y="-19.0">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.CREWMEMBER</node>
+            <node x="244.5" y="341.0">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.RATING</node>
+            <node x="-14.5" y="341.0">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.CRITICSRATING</node>
+            <node x="227.0" y="552.0">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.USERRATING</node>
+            <node x="-17.5" y="163.5">d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE_CREWMEMBER</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.USERRATING" target="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.RATING">
+              <point x="0.0" y="-48.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.RATING" target="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE">
+              <point x="0.0" y="-59.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE_CREWMEMBER" target="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.CREWMEMBER">
+              <point x="0.0" y="-36.5" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE_CREWMEMBER" target="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE">
+              <point x="97.5" y="0.0" />
+              <point x="-80.0" y="0.0" />
+            </edge>
+            <edge source="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.CRITICSRATING" target="d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.RATING">
+              <point x="94.5" y="0.0" />
+              <point x="-75.5" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="266.5" y="227.0" />
+          <SelectedNodes>
+            <node>d34f6814-9601-4270-85c5-402cc1dfdae9.TABLE:APP.MOVIE_CREWMEMBER</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
         </state>
       </provider>
     </entry>
