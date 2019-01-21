@@ -1,20 +1,24 @@
 package at.htl.movies.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.List;
+import javax.xml.bind.annotation.XmlTransient;
+import java.awt.*;
 import java.util.Set;
 
 @XmlRootElement
 @Entity(name = "CrewMember")
-
 @NamedQueries({
-        @NamedQuery(name = "CreqMember.findAllActors", query = "select cm from CrewMember cm where CrewMember.role = 'Actor'"),
-        @NamedQuery(name = "CrewMember.findAllDirectors", query = "select cm from CrewMember cm where CrewMember.role = 'Director'"),
+        @NamedQuery(name = "CrewMember.findAllActors", query = "select cm from CrewMember cm where cm.crewRole = 'Actor'"),
+        @NamedQuery(name = "CrewMember.findAllDirectors", query = "select cm from CrewMember cm where cm.crewRole = 'Director'"),
         @NamedQuery(name = "CrewMember.findAll", query = "select cm from CrewMember cm")
 })
 public class CrewMember {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,22 +26,27 @@ public class CrewMember {
     private String firstName;
     private String lastName;
 
-    private String role;
+    private String crewRole;
 
-    @ManyToMany(mappedBy = "crewMembers")
+    @JsonIgnore
+    @ManyToMany(mappedBy = "crewMembers", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private Set<Movie> movies;
 
     public CrewMember() {
     }
 
-    public CrewMember(String firstName, String lastName, String role) {
+    public CrewMember(String firstName, String lastName, String crewRole) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.role = role;
+        this.crewRole = crewRole;
     }
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -56,12 +65,12 @@ public class CrewMember {
         this.lastName = lastName;
     }
 
-    public String getRole() {
-        return role;
+    public String getCrewRole() {
+        return crewRole;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setCrewRole(String crewRole) {
+        this.crewRole = crewRole;
     }
 
     public Set<Movie> getMovies() {
@@ -70,5 +79,19 @@ public class CrewMember {
 
     public void setMovies(Set<Movie> movies) {
         this.movies = movies;
+    }
+
+    public void addMovie(Movie m){
+        if(!movies.contains(m))
+            movies.add(m);
+        if(!m.getCrewMembers().contains(this))
+            m.addCrewMember(this);
+    }
+
+    public void removeMovie(Movie m){
+        if(movies.contains(m))
+            movies.remove(m);
+        if(m.getCrewMembers().contains(this))
+            m.removeCrewMember(this);
     }
 }

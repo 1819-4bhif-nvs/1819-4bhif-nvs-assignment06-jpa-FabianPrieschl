@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="Apache Derby (Remote)">
+<dataSource name="db@localhost">
   <database-model serializer="dbm" dbms="DERBY" family-id="DERBY" format-version="4.14">
     <root id="1">
       <ServerVersion>10.14.2.0</ServerVersion>
@@ -28,25 +28,27 @@
       <Position>1</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="20" parent="13" name="FIRSTNAME">
+    <column id="20" parent="13" name="CREWROLE">
       <Position>2</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="21" parent="13" name="LASTNAME">
+    <column id="21" parent="13" name="FIRSTNAME">
       <Position>3</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="22" parent="13" name="ROLE">
+    <column id="22" parent="13" name="LASTNAME">
       <Position>4</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <index id="23" parent="13" name="SQL190121094048710">
+    <index id="23" parent="13" name="SQL190121212618000">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="24" parent="13" name="SQL190121094048710">
+    <key id="24" parent="13" name="SQL190121212618000">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
@@ -68,16 +70,16 @@
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="29" parent="14" name="SQL190121094048730">
+    <index id="29" parent="14" name="SQL190121212618010">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="30" parent="14" name="SQL190121094048790">
+    <index id="30" parent="14" name="SQL190121212618050">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
     </index>
-    <key id="31" parent="14" name="SQL190121094048730">
+    <key id="31" parent="14" name="SQL190121212618010">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
@@ -86,13 +88,15 @@
       <ColNames>ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>RATING</RefTableName>
-      <RefKeyName>SQL190121094048760</RefKeyName>
+      <RefKeyName>SQL190121212618030</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
     <column id="33" parent="15" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
     <column id="34" parent="15" name="GENRE">
       <Position>2</Position>
@@ -106,12 +110,12 @@
       <Position>4</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <index id="37" parent="15" name="SQL190121094048750">
+    <index id="37" parent="15" name="SQL190121212618020">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="38" parent="15" name="SQL190121094048750">
+    <key id="38" parent="15" name="SQL190121212618020">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
@@ -126,11 +130,11 @@
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="41" parent="16" name="SQL190121094048800">
+    <index id="41" parent="16" name="SQL190121212618060">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>MOVIES_ID</ColNames>
     </index>
-    <index id="42" parent="16" name="SQL190121094048791">
+    <index id="42" parent="16" name="SQL190121212618051">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CREWMEMBERS_ID</ColNames>
     </index>
@@ -138,14 +142,14 @@
       <ColNames>MOVIES_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>MOVIE</RefTableName>
-      <RefKeyName>SQL190121094048750</RefKeyName>
+      <RefKeyName>SQL190121212618020</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
     <foreign-key id="44" parent="16" name="FK9R9QOWWVBABVD1GODOU7V3DR3">
       <ColNames>CREWMEMBERS_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>CREWMEMBER</RefTableName>
-      <RefKeyName>SQL190121094048710</RefKeyName>
+      <RefKeyName>SQL190121212618000</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
     <column id="45" parent="17" name="DTYPE">
@@ -157,6 +161,8 @@
       <Position>2</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
     <column id="47" parent="17" name="POINTS">
       <Position>3</Position>
@@ -167,16 +173,16 @@
       <Position>4</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <index id="49" parent="17" name="SQL190121094048760">
+    <index id="49" parent="17" name="SQL190121212618030">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="50" parent="17" name="SQL190121094048810">
+    <index id="50" parent="17" name="SQL190121212618070">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>MOVIE_ID</ColNames>
     </index>
-    <key id="51" parent="17" name="SQL190121094048760">
+    <key id="51" parent="17" name="SQL190121212618030">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
@@ -185,7 +191,7 @@
       <ColNames>MOVIE_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>MOVIE</RefTableName>
-      <RefKeyName>SQL190121094048750</RefKeyName>
+      <RefKeyName>SQL190121212618020</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
     <column id="53" parent="18" name="USERNAME">
@@ -201,16 +207,16 @@
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="56" parent="18" name="SQL190121094048780">
+    <index id="56" parent="18" name="SQL190121212618040">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="57" parent="18" name="SQL190121094048811">
+    <index id="57" parent="18" name="SQL190121212618071">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
     </index>
-    <key id="58" parent="18" name="SQL190121094048780">
+    <key id="58" parent="18" name="SQL190121212618040">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
@@ -219,7 +225,7 @@
       <ColNames>ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>RATING</RefTableName>
-      <RefKeyName>SQL190121094048760</RefKeyName>
+      <RefKeyName>SQL190121212618030</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
   </database-model>

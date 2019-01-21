@@ -1,7 +1,12 @@
 package at.htl.movies.model;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+@XmlRootElement
 @Entity(name = "Rating")
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(discriminatorType = DiscriminatorType.STRING)
@@ -12,7 +17,8 @@ public abstract class Rating {
 
     private double points;
 
-    @ManyToOne(fetch = FetchType.EAGER,cascade = {CascadeType.REFRESH,CascadeType.DETACH,CascadeType.PERSIST,CascadeType.MERGE})
+    @JsonIgnore
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private Movie movie;
 
     public Rating() {

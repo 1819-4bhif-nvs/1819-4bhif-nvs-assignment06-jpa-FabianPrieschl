@@ -1,5 +1,6 @@
 package at.htl.movies.rest;
 
+import at.htl.movies.model.CrewMember;
 import at.htl.movies.model.Movie;
 
 import javax.ejb.Stateless;
@@ -7,8 +8,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceException;
 import javax.ws.rs.*;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.LinkedList;
 import java.util.List;
 
 @Path("movie")
@@ -22,7 +25,12 @@ public class MovieEndpoint {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
-        return Response.ok().entity(em.createNamedQuery("Movie.findAll", Movie.class).getResultList()).build();
+        List<Movie> list = em.createNamedQuery("Movie.findAll", Movie.class).getResultList();
+        GenericEntity entity = new GenericEntity<List<Movie>>(list){};
+        if(list != null && !list.isEmpty())
+            return Response.ok(entity).build();
+        else
+            return Response.noContent().build();
     }
 
     @Path("find/{id}")
@@ -37,20 +45,30 @@ public class MovieEndpoint {
         }
     }
 
+    @Path("delete/{id}")
     @DELETE
-    @Path("{id}")
-    public Response delete(@PathParam("id") long id){
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response deleteMovie(@PathParam("id") long id){
         Movie m = em.find(Movie.class, id);
-        if(m != null){
-            em.remove(m);
+        try {
+            if(m != null){
+                List<CrewMember> crewMembers = new LinkedList(m.getCrewMembers());
+                for (CrewMember cm : crewMembers) {
+                    cm.removeMovie(m);
+                }
+                em.remove(m);
+            }
         }
-        return Response.noContent().build();
+        catch (Exception e){
+            return Response.status(404).build();
+        }
+        return Response.noContent().entity(m).build();
     }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response post(Movie m){
+    public Response postMovie(Movie m){
         try {
             em.persist(m);
             em.flush();
@@ -64,7 +82,7 @@ public class MovieEndpoint {
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response put(Movie m){
+    public Response putMovie(Movie m){
         m = em.merge(m);
         em.flush();
         em.refresh(m);

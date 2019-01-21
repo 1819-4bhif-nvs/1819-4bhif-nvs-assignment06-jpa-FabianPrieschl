@@ -12,7 +12,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class MovieDBTest {
 
     public static final String DRIVER_STRING = "org.apache.derby.jdbc.ClientDriver";
-    private static final String CONNECTION_STRING = "jdbc:derby://localhost:1527/db;create=true";
+    private static final String CONNECTION_STRING = "jdbc:derby://localhost:1527/db";
     private static final String USER = "app";
     private static final String PASSWORD = "app";
     private static Connection conn;

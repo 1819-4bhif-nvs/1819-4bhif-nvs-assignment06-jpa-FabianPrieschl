@@ -15,9 +15,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.greaterThan;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.*;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MovieTest {
@@ -33,7 +31,7 @@ public class MovieTest {
 
     @Test
     public void test01_getAllMovies() {
-        Response response = this.webTarget.path("/movie/findall").request(MediaType.APPLICATION_JSON).get();
+        Response response = this.webTarget.path("/movie/findAll").request(MediaType.APPLICATION_JSON).get();
         assertThat(response.getStatus(), is(200));
         JsonArray jsonArray = response.readEntity(JsonArray.class);
         assertThat(jsonArray.getValuesAs(JsonObject.class).size(), greaterThan(1));
@@ -49,8 +47,20 @@ public class MovieTest {
     }
 
     @Test
-    public void test03_deleteMovie(){
-        Response response = webTarget.path("/movie/1").request().delete();
-        assertThat(response.getStatus(),is(204));
+    public void test03_getAllCrewMembers() {
+        Response response = this.webTarget.path("/crewMember/findAll").request(MediaType.APPLICATION_JSON).get();
+        assertThat(response.getStatus(), is(200));
+        JsonArray jsonArray = response.readEntity(JsonArray.class);
+        assertThat(jsonArray.getValuesAs(JsonObject.class).size(), greaterThan(1));
+    }
+
+    @Test
+    public void test04_getSingleCrewMember() {
+        Response response = this.webTarget.path("crewMember/find/1").request(MediaType.APPLICATION_JSON).get();
+        assertThat(response.getStatus(), is(200));
+        JsonObject jsonObject = response.readEntity(JsonObject.class);
+        assertThat(jsonObject.getString("firstName"), is("Frank"));
+        assertThat(jsonObject.getString("lastName"), is("Darabont"));
+        assertThat(jsonObject.getString("crewRole"), is("Director"));
     }
 }
