@@ -41,7 +41,7 @@ public class MovieTest {
 
     @Test
     public void test02_getSingleMovie() {
-        Response response = this.webTarget.path("/movie/find/2").request(MediaType.APPLICATION_JSON).get();
+        Response response = this.webTarget.path("/movie/find/1").request(MediaType.APPLICATION_JSON).get();
         assertThat(response.getStatus(), is(200));
         JsonObject jsonObject = response.readEntity(JsonObject.class);
         assertThat(jsonObject.getString("title"), is("Die Verurteilten"));
@@ -50,7 +50,7 @@ public class MovieTest {
 
     @Test
     public void test03_deleteMovie(){
-        Response response = webTarget.path("/movie/2").request().delete();
+        Response response = webTarget.path("/movie/1").request().delete();
         assertThat(response.getStatus(),is(204));
     }
 }

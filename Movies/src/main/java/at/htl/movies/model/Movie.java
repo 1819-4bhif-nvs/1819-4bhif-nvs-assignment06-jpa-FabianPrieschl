@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 @XmlRootElement
 @Entity(name = "Movie")
@@ -14,7 +15,7 @@ import java.util.List;
 public class Movie {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
@@ -25,13 +26,18 @@ public class Movie {
 
     private LocalDate releaseDate;
 
-    @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    private List<CrewMember> crewMembers;
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "Movie_CrewMember",
+            joinColumns = { @JoinColumn(name = "movies_id") },
+            inverseJoinColumns = { @JoinColumn(name = "crewMembers_id") }
+    )
+    private Set<CrewMember> crewMembers;
 
     public Movie() {
     }
 
-    public Movie(String title, String genre, LocalDate releaseDate, List<CrewMember> crewMembers) {
+    public Movie(String title, String genre, LocalDate releaseDate, Set<CrewMember> crewMembers) {
         this.title = title;
         this.genre = genre;
         this.releaseDate = releaseDate;
@@ -74,11 +80,11 @@ public class Movie {
         this.releaseDate = releaseDate;
     }
 
-    public List<CrewMember> getCrewMembers() {
+    public Set<CrewMember> getCrewMembers() {
         return crewMembers;
     }
 
-    public void setCrewMembers(List<CrewMember> crewMembers) {
+    public void setCrewMembers(Set<CrewMember> crewMembers) {
         this.crewMembers = crewMembers;
     }
 }

@@ -7,7 +7,7 @@ import javax.persistence.*;
 @DiscriminatorColumn(discriminatorType = DiscriminatorType.STRING)
 public abstract class Rating {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private double points;

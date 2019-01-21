@@ -4,6 +4,7 @@ import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
+import java.util.Set;
 
 @XmlRootElement
 @Entity(name = "CrewMember")
@@ -15,7 +16,7 @@ import java.util.List;
 })
 public class CrewMember {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String firstName;
@@ -23,9 +24,8 @@ public class CrewMember {
 
     private String role;
 
-    @ManyToMany(mappedBy = "crewMembers", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    @JsonbTransient
-    private List<Movie> movies;
+    @ManyToMany(mappedBy = "crewMembers")
+    private Set<Movie> movies;
 
     public CrewMember() {
     }
@@ -64,11 +64,11 @@ public class CrewMember {
         this.role = role;
     }
 
-    public List<Movie> getMovies() {
+    public Set<Movie> getMovies() {
         return movies;
     }
 
-    public void setMovies(List<Movie> movies) {
+    public void setMovies(Set<Movie> movies) {
         this.movies = movies;
     }
 }

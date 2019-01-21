@@ -8,8 +8,10 @@ import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 @Singleton
 @Startup
@@ -20,7 +22,7 @@ public class InitBean {
 
     @PostConstruct
     public void init() {
-        List<CrewMember> cm1 = new LinkedList<>();
+        Set<CrewMember> cm1 = new HashSet<>();
         CrewMember d1 = new CrewMember("Frank", "Darabont", "Director");
         CrewMember a1 = new CrewMember("Tim", "Robbins", "Actor");
         CrewMember a2 = new CrewMember("Morgan", "Freeman", "Actor");
@@ -38,7 +40,7 @@ public class InitBean {
         rl1.add(r2);
         m1.setRatings(rl1);
 
-        List<CrewMember> cm2 = new LinkedList<>();
+        Set<CrewMember> cm2 = new HashSet<>();
         CrewMember d2 = new CrewMember("Francis Ford", "Coppola", "Director");
         CrewMember a4 = new CrewMember("Marlon", "Brando", "Actor");
         CrewMember a5 = new CrewMember("Al", "Pacino", "Actor");
@@ -56,7 +58,7 @@ public class InitBean {
         rl2.add(r4);
         m2.setRatings(rl2);
 
-        List<CrewMember> cm3 = new LinkedList<>();
+        Set<CrewMember> cm3 = new HashSet<>();
         CrewMember d3 = new CrewMember("Christopher", "Nolan", "Director");
         CrewMember a7 = new CrewMember("Christian", "Bale", "Actor");
         CrewMember a8 = new CrewMember("Heath", "Ledger", "Actor");
