@@ -13,7 +13,7 @@
 
 ## Projektbeschreibung
 
-Mein Projekt realisiert eine einfache Filmverwaltung mit den dazugehörigen Entitäten, wie z.B. Movie und Actor.
+Mein Projekt realisiert eine einfache Filmverwaltung mit den dazugehörigen Entitäten, wie z.B. Movie und CrewMember.
 
 ## Class Diagram
 
