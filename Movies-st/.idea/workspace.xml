@@ -3,25 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="189150ae-17bf-4722-8e96-42465fa7aa84" name="Default Changelist" comment="added DB tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MovieDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MovieDBTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MovieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/.idea/dataSources/d34f6814-9601-4270-85c5-402cc1dfdae9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movies/.idea/dataSources/9ea69a3b-b409-4fb6-be77-641ced066f10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/.idea/dataSources/9ea69a3b-b409-4fb6-be77-641ced066f10.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movies/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/images/Movies-CLD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/images/Movies-CLD2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/images/Movies-ERD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/images/Movies-ERD2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Movies/movies.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/movies.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/business/InitBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/business/InitBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/model/CrewMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/model/CrewMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/model/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/model/Rating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/rest/CrewMemberEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/rest/CrewMemberEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/rest/MovieEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/src/main/java/at/htl/movies/rest/MovieEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movies/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Movies/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,7 +29,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileEditorManager">
@@ -50,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+            <state relative-caret-position="361">
+              <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -59,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/MovieDBTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            <state relative-caret-position="508">
+              <caret line="123" column="5" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/MovieTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
+            <state relative-caret-position="1054">
               <caret line="62" column="48" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -95,8 +87,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/MovieTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/MovieDBTest.java" />
       </list>
     </option>
@@ -120,6 +112,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -150,14 +143,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="derby" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548106088514" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554144836739" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -174,7 +167,45 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MovieTest">
+    <configuration name="MovieDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movies-st" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MovieDBTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieDBTest.t01_readExemplars" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movies-st" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MovieDBTest" />
+      <option name="METHOD_NAME" value="t01_readExemplars" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieDBTest.t02_createExemplars" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movies-st" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MovieDBTest" />
+      <option name="METHOD_NAME" value="t02_createExemplars" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieDBTest.t04_deleteCreatedExemplars" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movies-st" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MovieDBTest" />
+      <option name="METHOD_NAME" value="t04_deleteCreatedExemplars" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MovieTest" type="JUnit" factoryName="JUnit">
       <module name="movies-st" />
       <option name="PACKAGE_NAME" value="" />
@@ -187,6 +218,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MovieDBTest.t04_deleteCreatedExemplars" />
+        <item itemvalue="JUnit.MovieDBTest.t02_createExemplars" />
+        <item itemvalue="JUnit.MovieDBTest" />
+        <item itemvalue="JUnit.MovieDBTest.t01_readExemplars" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -204,49 +243,49 @@
       <workItem from="1548021036341" duration="38000" />
       <workItem from="1548060445764" duration="706000" />
       <workItem from="1548104649063" duration="1436000" />
+      <workItem from="1554141365232" duration="3569000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MovieTest - 2018.12.08 at 19h 37m 07s.xml">
+    <history-entry file="MovieDBTest - 2019.04.01 at 20h 11m 13s.xml">
+      <configuration name="MovieDBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MovieDBTest - 2019.04.01 at 20h 12m 35s.xml">
+      <configuration name="MovieDBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MovieDBTest - 2019.04.01 at 20h 20m 17s.xml">
+      <configuration name="MovieDBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MovieDBTest_t02_createExemplars - 2019.04.01 at 20h 32m 16s.xml">
+      <configuration name="MovieDBTest.t02_createExemplars" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MovieDBTest_t02_createExemplars - 2019.04.01 at 20h 34m 21s.xml">
+      <configuration name="MovieDBTest.t02_createExemplars" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MovieTest - 2019.04.01 at 20h 38m 51s.xml">
       <configuration name="MovieTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MovieTest - 2018.12.08 at 19h 42m 52s.xml">
+    <history-entry file="MovieDBTest_t04_deleteCreatedExemplars - 2019.04.01 at 20h 43m 13s.xml">
+      <configuration name="MovieDBTest.t04_deleteCreatedExemplars" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MovieDBTest_t04_deleteCreatedExemplars - 2019.04.01 at 20h 45m 13s.xml">
+      <configuration name="MovieDBTest.t04_deleteCreatedExemplars" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MovieTest - 2019.04.01 at 20h 50m 04s.xml">
       <configuration name="MovieTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MovieTest - 2018.12.08 at 19h 47m 40s.xml">
-      <configuration name="MovieTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MovieTest - 2018.12.08 at 19h 54m 00s.xml">
-      <configuration name="MovieTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MovieTest - 2019.01.21 at 22h 04m 53s.xml">
-      <configuration name="MovieTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MovieTest - 2019.01.21 at 22h 05m 35s.xml">
-      <configuration name="MovieTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MovieTest - 2019.01.21 at 22h 16m 17s.xml">
-      <configuration name="MovieTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MovieTest - 2019.01.21 at 22h 17m 32s.xml">
-      <configuration name="MovieTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MovieTest - 2019.01.21 at 22h 18m 52s.xml">
-      <configuration name="MovieTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MovieTest - 2019.01.21 at 22h 20m 20s.xml">
+    <history-entry file="MovieTest - 2019.04.01 at 20h 51m 36s.xml">
       <configuration name="MovieTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7649000" />
+    <option name="totallyTimeSpent" value="11218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21140939" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21409395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -262,7 +301,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -271,7 +310,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.3295302" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.3295302" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
@@ -286,16 +325,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="added DB tests" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MovieTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
+        <state relative-caret-position="1054">
           <caret line="62" column="48" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -303,10 +335,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/251121be-2893-484d-8899-ae04bf728f2b/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MovieDBTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        <state relative-caret-position="508">
+          <caret line="123" column="5" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -65,9 +65,9 @@ public class MovieDBTest {
         int countInserts = 0;
         try {
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO movie (id, titel, genre) VALUES (4,'Test1', 'Sci-Fi')";
+            String sql = "INSERT INTO movie (id, genre, releasedate, title) VALUES (4, 'Sci-Fi', '1995-08-09', 'Test1')";
             countInserts += stmt.executeUpdate(sql);
-            sql = "INSERT INTO movie (id, title, genre) VALUES (5,'Test2', 'Drama')";
+            sql = "INSERT INTO movie (id, genre, releasedate, title) VALUES (5, 'Drama', '1995-02-03', 'Test2')";
             countInserts += stmt.executeUpdate(sql);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -76,7 +76,7 @@ public class MovieDBTest {
 
         // Daten abfragen
         try {
-            PreparedStatement pstmt = conn.prepareStatement("SELECT id, title, genre FROM movie");
+            PreparedStatement pstmt = conn.prepareStatement("SELECT id, genre, releasedate, title FROM movie");
             ResultSet rs = pstmt.executeQuery();
 
             rs.next();
@@ -110,36 +110,13 @@ public class MovieDBTest {
         }
         assertThat(countUpdates,is(1));
         try {
-            PreparedStatement pstmt = conn.prepareStatement("SELECT id, title, genre FROM movie where id=5");
+            PreparedStatement pstmt = conn.prepareStatement("SELECT id, genre, releasedate, title FROM movie where id=5");
             ResultSet rs = pstmt.executeQuery();
 
             rs.next();
             assertThat(rs.getInt("id"),is(5));
             assertThat(rs.getString("title"),is("Test3"));
             assertThat(rs.getInt("genre"),is("Drama"));
-            rs.next();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-    @Test
-    public void t04_deleteCreatedExemplars(){
-        int deletedExemplars =0;
-        try {
-            Statement stmt = conn.createStatement();
-            String sql = "DELETE FROM movie where id>1";
-            deletedExemplars= stmt.executeUpdate(sql);
-
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-        assertThat(deletedExemplars,is(4));
-        try {
-            PreparedStatement pstmt = conn.prepareStatement("SELECT count(*) counted FROM movie");
-            ResultSet rs = pstmt.executeQuery();
-
-            rs.next();
-            assertThat(rs.getInt("counted"),is(1));
             rs.next();
         } catch (SQLException e) {
             e.printStackTrace();
